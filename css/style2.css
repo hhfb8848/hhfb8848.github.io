@@ -1,0 +1,37 @@
+/* 全局样式说明 */
+/* ----------------
+    此文件是对右侧、底部的内容进行设计
+    1、对于全局的设置
+-------------------*/
+/* 右侧 */
+.right-body {
+    height: 500vh;
+    width: 63%;
+}
+
+.right-body div {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-body div:nth-child(1) {
+    background-color: red;
+}
+
+.right-body div:nth-child(2) {
+    background-color: rgb(0, 255, 145);
+}
+
+.right-body div:nth-child(3) {
+    background-color: rgb(226, 255, 5);
+}
+
+/* 页面的尾部 */
+footer {
+    height: 100vh;
+    display: flex;
+    background-color: blueviolet;
+    align-items: center;
+    justify-items: center;
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!-- 图标库 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/css/all.css" rel="stylesheet">
+    <!-- 页面滑动 -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+    <!-- 导航栏 -->
+    <header class="header_wrapper">
+        <!-- 
+            fixed-top：导航栏置顶
+            navbar-expand-lg：大屏幕水平铺开
+         -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/High Resolution Logo - Transparent Background.png" alt="">
+                </a>
+                <!-- btn-i：设置折叠按钮的颜色 -->
+                <button class="navbar-toggler btn-i border-0" type="button" data-bs-target="#offcanvasRight"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    data-bs-toggle="offcanvas">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </button>
+                <!-- 
+                    移动端侧边栏开始
+                    offcanvas-end ：从右侧出现
+                    tabindex="-1" ：表示元素是可聚焦的，但是不能通过 tab 导航来访问到该元素，可以通过js获取。
+                    d-lg-none：大屏幕时隐藏
+                    customize：自定义样式
+                 -->
+                <div class="offcanvas offcanvas-end d-lg-none customize" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="head text-center">
+                        <!-- 
+                            w-50：图片大小
+                            mt-4：与顶部的距离
+                        -->
+                        <img src="/images/cat.png" alt="" class="img-fluid rounded-circle mt-4">
+                        <h1><a href="index.html">YuHui</a></h1>
+                        <div class="social-links mt-1">
+                            <a href="#" class="weixin"><i class="fa-brands fa-weixin"></i></a>
+                            <a href="#" class="qq"><i class="fa-brands fa-qq"></i></a>
+                            <a href="#" class="github"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <div class="row text-center mt-3 row_style">
+                        <div class="col-4">
+                            <h2><a href="">笔记</a></h2>
+                            <span>17</span>
+                        </div>
+                        <div class="col-4">
+                            <h2><a href="">标签</a></h2>
+                            <span>17</span>
+                        </div>
+                        <div class="col-4">
+                            <h2><a href="">项目</a></h2>
+                            <span>17</span>
+                        </div>
+                    </div>
+                    <!-- 移动端导航栏 -->
+                    <nav class="nav-menu mt-2">
+                        <ul>
+                            <li><a href="#"><i class="fa-sharp fa-solid fa-house"></i><span>首页</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-note-sticky"></i><span>笔记</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-diagram-project"></i><span>项目</span></a></li>
+                            <li><a href="#"><i class="fa-brands fa-sourcetree"></i><span>资源下载</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-music"></i><span>音乐馆</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- 移动端侧边栏结束 -->
+                <!-- 
+                    PC端导航栏
+                    justify-content-end：向右排列
+                 -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active" aria-current="page">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#note" class="nav-link">笔记</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#project" class="nav-link">项目</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#resource" class="nav-link">资源下载</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#leaveWords" class="nav-link">留言</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#music" class="nav-link">音乐馆</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- 导航栏结束 -->
+
+    <!-- 背景及home -->
+    <section id="home" class="banner_wrapper">
+        <div class="video-container">
+            <!-- <div class="color-overlay"></div> -->
+            <video autoplay muted loop>
+                <source src="images/video.mp4">
+            </video>
+        </div>
+        <!-- index-content：自定义样式 -->
+        <div class="container text-center index-content">
+            <div class="row">
+                <div class="col-12 text-center text-md-center">
+                    <h1>Welcome To My Blog</h1>
+                    <!-- typing-effect：定义打字效果 -->
+                    <span class="auto-typing-effect"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 背景结束 -->
+    <!-- 
+        个人中心页面
+        d-none d-lg-block：隐藏在小于 lg 的屏幕上
+        con-style：对左边的卡片做调整
+    -->
+    <section id="page-body" class="page-body_wrapper">
+        <!-- 左侧 -->
+        <div class="left-body d-none d-lg-block">
+            <div class="card card1">
+                <!-- 卡片头 -->
+                <div class="card-head">
+                    <img src="images/cat.png" alt="" class="img-fluid rounded-circle w-25 mt-3">
+                    <h1><a href="index.html">YuHui</a></h1>
+                </div>
+                <!-- 卡身 -->
+                <div class="card-body">
+                    <div class="row row_style mb-3">
+                        <div class="col-4">
+                            <h2><a href="">笔记</a></h2>
+                            <span>17</span>
+                        </div>
+                        <div class="col-4">
+                            <h2><a href="">标签</a></h2>
+                            <span>17</span>
+                        </div>
+                        <div class="col-4">
+                            <h2><a href="">项目</a></h2>
+                            <span>17</span>
+                        </div>
+                    </div>
+                    <div class="btn-model">
+                        <a href="" class="btn">
+                            <i class="fa-brands fa-github"></i>+关注
+                        </a>
+                    </div>
+                </div>
+                <!-- 卡尾 -->
+                <div class="card-foot">
+                    <div class="social-links">
+                        <a href="#" class="weixin"><i class="fa-brands fa-weixin"></i></a>
+                        <a href="#" class="qq"><i class="fa-brands fa-qq"></i></a>
+                        <a href="#" class="github"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="card-head">
+                    <span><i class="fa-solid fa-hourglass-half"></i></span>
+                    <h3>倒计时</h3>
+                    <p id="currentTime"></p>
+                </div>
+                <div class="card-body">
+                    <!-- 倒计时1 -->
+                    <div class="progress-bar1">
+                        <span>今天已经过去<p class="differ-hour"></p>个小时</span>
+                        <div class="progress">
+                            <div class="progress-done"></div>
+                        </div>
+                    </div>
+                    <!-- 倒计时2 -->
+                    <div class="progress-bar2">
+                        <span>本周已经过去<p class="differ-week"></p>天</span>
+                        <div class="progress">
+                            <div class="progress-done"></div>
+                        </div>
+                    </div>
+                    <!-- 倒计时3 -->
+                    <div class="progress-bar3">
+                        <span>本月已经过去<p class="differ-month"></p>天</span>
+                        <div class="progress">
+                            <div class="progress-done"></div>
+                        </div>
+                    </div>
+                    <!-- 倒计时4 -->
+                    <div class="progress-bar4">
+                        <span>今年已经过去<p class="differ-year"></p>个月</span>
+                        <div class="progress">
+                            <div class="progress-done"></div>
+                        </div>
+                    </div>
+                    <!-- 倒计时5 -->
+                    <div class="progress-bar5">
+                        <span>距离毕业还有<p class="differ-graduation"></p>天</span>
+                        <div class="progress">
+                            <div class="progress-done"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="right-body">
+            <div id="note"></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+    <!-- 页尾 -->
+    <footer>
+        <h2>非常好</h2>
+    </footer>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自动打字效果 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- 页面滑动效果 -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+    <!-- 自定义js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

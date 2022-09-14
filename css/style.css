@@ -1,0 +1,408 @@
+/* 全局样式说明 */
+/* ----------------
+    此文件是对首页、导航栏、以及右侧的卡片做设计
+    1、对于全局的设置
+    2、导航栏的样式设计
+    3、背景及首页
+    4、对左边的卡片做调整
+    5、对背景以外的section做调整
+-------------------*/
+/* 字体样式引入 */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Ma+Shan+Zheng&family=Rubik+Distressed&family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+/* 1开始 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 网站主要颜色 */
+    --primary-color: #3399FF;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: cursive;
+    background-color: rgb(55, 66, 79);
+}
+
+/* 滑动条 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(55, 66, 79);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--primary-color));
+}
+
+/* 1结束 */
+/* 2开始 */
+.header_wrapper .navbar {
+    padding: 5px 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+/* 导航栏中logo的设定 */
+.header_wrapper .navbar-brand img {
+    max-width: 130px;
+    height: auto;
+}
+
+.header_wrapper .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.header_wrapper .nav-item {
+    margin: 0 7px;
+}
+
+.header_wrapper .nav-item .nav-link {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+}
+
+.header_wrapper .btn-i i {
+    color: var(--primary-color);
+}
+
+.header_wrapper .nav-item .nav-link::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background: var(--primary-color);
+    transition: 0.3s;
+    bottom: 0;
+}
+
+.header_wrapper .nav-item .nav-link.active::after,
+.header_wrapper .nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
+.header_wrapper .nav-item .nav-link.active,
+.header_wrapper .nav-item .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.header-scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(4, 86, 157, 0.2);
+    -webkit-box-shadow: 0 4px 6px 0 rgba(61, 0, 243, 0.05);
+    box-shadow: 0 4px 6px 0 rgba(66, 0, 248, 0.05);
+}
+
+.header-scrolled .nav-item .nav-link.active,
+.header-scrolled .nav-item .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* 2结束 */
+/* 3开始 */
+/* 首页的内容*/
+.banner_wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+
+.banner_wrapper .index-content {
+    /* padding-top: 22%; */
+    z-index: 1;
+}
+
+.banner_wrapper .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -6;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner_wrapper .video-container video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.banner_wrapper h1 {
+    font-size: 60px;
+    font-family: 'Rubik Distressed', cursive;
+    /* font-weight: 600; */
+    color: var(--primary-color);
+    text-shadow: 0 0 20px var(--primary-color);
+    letter-spacing: 4px;
+}
+
+.banner_wrapper span {
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* 3结束 */
+/* 页面的中心部分 */
+.page-body_wrapper {
+    height: 400vh;
+    display: flex;
+    width: 100%;
+    transition: 1s;
+}
+
+/* 中心部分的左侧 */
+.left-body {
+    width: 37%;
+    height: 300vh;
+    display: flex;
+    background-color: black;
+    margin: 0 !important;
+}
+
+/* 所有卡片 */
+.left-body .card {
+    text-align: center;
+    align-items: center;
+    width: 65%;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+    border-top-color: rgba(225, 225, 225, 0.5);
+    border-left-color: rgba(225, 225, 225, 0.5);
+    border-bottom-color: rgba(225, 225, 225, 0.1);
+    border-right-color: rgba(225, 225, 225, 0.1);
+    margin-left: 30%;
+    background: linear-gradient(to right bottom, rgba(225, 225, 225, 0.5), rgba(225, 225, 225, 0.3));
+    margin-bottom: 30px;
+}
+
+/* 卡片1 */
+.left-body .card1 {
+    height: 50vh;
+}
+
+/* 头像 */
+.left-body .card1 .card-head img {
+    width: 45%;
+    border: 5px solid var(--primary-color);
+}
+
+/* 名字 */
+.left-body .card1 .card-head a {
+    font-family: 'Playball', cursive;
+    letter-spacing: 5px;
+    color: var(--primary-color);
+}
+
+/* 三个标签 */
+.left-body .card1 .card-body {
+    padding: 0;
+}
+
+.left-body .card1 .card-body .row_style {
+    width: 78%;
+    margin: 0 auto;
+}
+
+.left-body .card1 .card-body h2 a {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.left-body .card1 .card-body span {
+    color: aliceblue;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/* 按钮 */
+.left-body .card1 .card-body .btn-model a {
+    font-size: 20px;
+    padding: 0.2rem 7rem;
+    color: #fdfdfd;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.left-body .card1 .card-body .btn-model .btn {
+    border: 3.5px solid var(--primary-color);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-body .card1 .card-body .btn-model .btn:hover {
+    box-shadow: 1px 1px 25px 10px rgb(4, 167, 255);
+}
+
+.left-body .card1 .card-body .btn-model .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgb(4, 167, 255),
+            transparent);
+    transition: all 1s;
+}
+
+.left-body .card1 .card-body .btn-model .btn:hover::before {
+    left: 100%;
+}
+
+.left-body .card1 .card-body .btn-model a:hover {
+    color: var(--primary-color);
+}
+
+.left-body .card1 .card-head a:hover,
+.left-body .card1 .card-body h2 a:hover {
+    color: #fdfdfd;
+}
+
+.left-body .card1 .card-foot {
+    position: relative;
+    bottom: 3%;
+}
+
+.left-body .card1 .card-foot .social-links a {
+    color: var(--primary-color);
+    font-size: 25px;
+    margin: 0 5px;
+    width: 10%;
+    height: 5%;
+    display: inline-block;
+    transition: 0.5s linear;
+}
+
+.left-body .card1 .card-foot .social-links a:hover {
+    /* 缩小为原来的0.8倍 */
+    transform: scale(1.4);
+    color: white;
+}
+
+/* 卡片1结束 */
+
+/* 卡片2 */
+.left-body .card2 {
+    height: 65vh;
+}
+
+.left-body .card2 .card-head span,
+.left-body .card2 .card-head h3 {
+    margin-top: 3%;
+    font-size: 28px;
+    font-weight: 600;
+    display: inline-block;
+    color: var(--primary-color);
+    cursor: pointer;
+    letter-spacing: 4px;
+}
+
+.left-body .card2 .card-head p {
+    color: #fdfdfd;
+    font-size: 20px;
+}
+
+.left-body .card2 .card-body {
+    padding: 0;
+    /* width: 90%; */
+}
+
+.left-body .card2 .card-body span {
+    height: 28px;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.left-body .card2 .card-body p {
+    /* height: 40px; */
+    display: flex;
+    font-size: 20px;
+    position: relative;
+    bottom: 3px;
+    color: var(--primary-color);
+}
+
+.left-body .card2 .card-body .progress {
+    margin-bottom: 20px;
+    background-color: rgb(225, 244, 234);
+    border-radius: 20px;
+    height: 27px;
+    width: 300px;
+}
+
+.progress-done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    height: 100%;
+    width: 0;
+    transition: 1s ease 0.3s;
+    font-size: 14px;
+    letter-spacing: 3px;
+    position: relative;
+    position: relative;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+
+}
+
+.progress-done::after {
+            z-index: -1;
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        #0097fb,
+        #1a94df,
+        #0073ff,
+        #0082bf,
+        #00bcfb,
+        #3175e2,
+        #0f7cd0,
+        #16a3ef,
+        #0092fb);
+    background-size: 500%;
+    animation: progress-animate 20s linear infinite;
+}
+
+@keyframes progress-animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    0% {
+        background-position: 500% 0;
+    }
+}
