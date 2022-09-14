@@ -83,17 +83,27 @@
         font-size: 20px;
     }
 
-        .right-body {
-            width: 100%;
-        }
+    .right-body {
+        width: 100%;
+    }
+
+    .video-container {
+        display: none;
+    }
+
+    .left-body {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
+
     /* 侧边栏的宽度 */
     .header_wrapper .customize {
         width: 70%;
     }
-/* 首页的内容 */
+
+    /* 首页的内容 */
     .banner_wrapper .index-content {
         padding-bottom: 20%;
         width: 70%;
@@ -106,7 +116,16 @@
     .banner_wrapper span {
         font-size: 20px;
     }
-    .right-body{
+
+    .right-body {
         width: 100%;
+    }
+
+    .left-body {
+        display: none;
+    }
+
+    .video-container {
+        display: none;
     }
 }
