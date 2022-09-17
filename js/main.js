@@ -8,37 +8,6 @@ window.onscroll = function () {
     }
 }
 // 滑动效果
-
-
-// 打字效果
-var typed = new Typed('.auto-typing-effect', {
-    strings: [
-        "好好学习，天天向上",
-        "Study hard and make progress every day",
-        "不积跬步，无以至千里",
-        "Short step, not even thousands of miles",
-        "不积小流，无以成江海",
-        "Not small streams, beyond into the sea"
-    ],
-    typeSpeed: 150,//打字速度
-    backSpeed: 70,//回退速度
-    loop: true,//循环打字
-})
-
-// 滑动效果
-
-function splitScroll() {
-    let controller2 = new ScrollMagic.Controller();
-    new ScrollMagic.Scene({
-        duration: '100%',
-        triggerElement: '.left-body',
-        triggerHook: 0
-    })
-        .setPin(".left-body")
-        .addTo(controller2);
-}
-splitScroll();
-
 // 倒计时模块
 // 获取进度条的元素
 var progressHour = document.querySelector(".progress-bar1 .progress-done");
@@ -158,3 +127,16 @@ function changeWidth5(width) {
     progressGraduation.innerHTML = width + '%';
 }
 // 倒计时模块结束
+
+//在页面未加载完毕之前显示的loading效果
+var loading = document.querySelector(".loading-position")
+//呈现loading效果
+document.write(loading);
+//监听加载状态改变
+document.onreadystatechange = completeLoading;
+//加载状态为complete时移除loading效果
+function completeLoading() {
+    if (document.readyState == "complete") {
+        loading.parentNode.removeChild(loading);
+    }
+}
