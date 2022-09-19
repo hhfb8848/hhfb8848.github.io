@@ -130,8 +130,6 @@ function changeWidth5(width) {
 
 //在页面未加载完毕之前显示的loading效果
 var loading = document.querySelector(".loading-position")
-//呈现loading效果
-document.write(loading);
 //监听加载状态改变
 document.onreadystatechange = completeLoading;
 //加载状态为complete时移除loading效果

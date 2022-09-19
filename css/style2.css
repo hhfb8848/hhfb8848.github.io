@@ -31,7 +31,7 @@
 footer {
     height: 100vh;
     display: flex;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     align-items: center;
     justify-items: center;
 }
