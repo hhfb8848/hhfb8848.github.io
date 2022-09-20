@@ -28,24 +28,25 @@ a {
 
 body {
     font-family: cursive;
-    background:
-        linear-gradient(90deg, #7E898F 0%, #636C75 100%),
-        radial-gradient(at top, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.55) 100%),
-        radial-gradient(at top, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.08) 63%);
-    background-blend-mode: multiply, screen;
+    background-color: #797572;
+        background-image:
+            linear-gradient(-173deg, rgba(255, 255, 255, 0.20) 0%, #000000 100%),
+            linear-gradient(72deg, rgba(255, 255, 255, 0.25) 25%, rgba(0, 0, 0, 0.25) 100%),
+            radial-gradient(47% 102%, rgba(255, 255, 255, 0.50) 0%, rgba(21, 24, 32, 0.60) 120%);
+        background-blend-mode: multiply;
 }
 
 /* 滑动条 */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 1px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(55, 66, 79);
-}
+        background-color: #000000;
+        }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, var(--primary-color));
+    /* background: linear-gradient(transparent, var(--primary-color)); */
 }
 
 /* 粒子效果 */
@@ -232,8 +233,8 @@ body {
     display: flex;
     display: block;
     margin: 0 !important;
-    /* background: #0073ff; */
-    position: relative;
+    /* background: #0f0202; */
+
 }
 
 /* 所有卡片 */

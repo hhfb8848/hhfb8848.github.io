@@ -127,7 +127,10 @@ function changeWidth5(width) {
     progressGraduation.innerHTML = width + '%';
 }
 // 倒计时模块结束
-
+var removeVideo = document.querySelector(".video-container");
+if(screen.width<991){
+    removeVideo.parentNode.removeChild(removeVideo)
+}
 //在页面未加载完毕之前显示的loading效果
 var loading = document.querySelector(".loading-position")
 //监听加载状态改变

@@ -29,7 +29,7 @@ particlesJS("particles-js", {
             }
         },
         color: {
-            value: "#ffffff"
+            value: "#3399FF"
         },
         shape: {
             type: "edge",
@@ -69,9 +69,9 @@ particlesJS("particles-js", {
         line_linked: {
             enable: false,
             distance: 150,
-            color: "#ffffff",
+            color: "#3399FF",
             opacity: 0.4,
-            width: 1
+            width: 2
         },
         move: {
             enable: true,

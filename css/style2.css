@@ -15,7 +15,7 @@
     flex-direction: column;
 }
 
-.right-body div:nth-child(1) {
+/* .right-body div:nth-child(1) {
     background-color: red;
 }
 
@@ -25,7 +25,7 @@
 
 .right-body div:nth-child(3) {
     background-color: rgb(226, 255, 5);
-}
+} */
 
 /* 页面的尾部 */
 footer {

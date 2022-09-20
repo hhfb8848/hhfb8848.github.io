@@ -87,9 +87,9 @@
         width: 100%;
     }
 
-    .video-container {
+    /* .video-container {
         display: none;
-    }
+    } */
 
     .left-body {
         display: none;
@@ -125,7 +125,7 @@
         display: none;
     }
 
-    .video-container {
+    /* .video-container {
         display: none;
-    }
+    } */
 }
